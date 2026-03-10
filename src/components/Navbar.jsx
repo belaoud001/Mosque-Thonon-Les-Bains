@@ -43,7 +43,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <img src="/logo.png" alt="AMC Logo" className="w-14 h-14 rounded-full object-cover transform transition-transform duration-300" />
+            <img src={`${import.meta.env.BASE_URL}logo.png`} alt="AMC Logo" className="w-14 h-14 rounded-full object-cover transform transition-transform duration-300" />
             <div className="flex flex-col">
               <span className="text-white font-heading font-bold text-lg leading-tight">
                 AMC

@@ -57,7 +57,7 @@ export default function About() {
                 {/* Main image container */}
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-primary-900/20">
                   <img
-                    src="/mosque.jpg"
+                    src={`${import.meta.env.BASE_URL}mosque.jpg`}
                     alt="Mosquée de Thonon-les-Bains"
                     className="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-700"
                   />

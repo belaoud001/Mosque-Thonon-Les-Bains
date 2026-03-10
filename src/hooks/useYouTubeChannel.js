@@ -8,8 +8,8 @@ const CHANNEL_URL = import.meta.env.VITE_YOUTUBE_CHANNEL_URL
 const SUBSCRIBE_URL = `${CHANNEL_URL}?sub_confirmation=1`
 
 // Channel avatar & banner saved locally to avoid YouTube 429 rate-limiting
-const CHANNEL_AVATAR = '/images/channel-avatar.jpg'
-const CHANNEL_BANNER = '/images/channel-banner.jpg'
+const CHANNEL_AVATAR = `${import.meta.env.BASE_URL}images/channel-avatar.jpg`
+const CHANNEL_BANNER = `${import.meta.env.BASE_URL}images/channel-banner.jpg`
 
 // YouTube RSS feed URL
 const RSS_URL = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`

@@ -88,7 +88,7 @@ export default function Donate() {
             <ScrollReveal delay={0}>
               <div className="bg-white rounded-3xl p-8 shadow-xl shadow-gold-400/5 border border-gold-400 h-full flex flex-col">
                 <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center mb-6 shadow-lg shadow-blue-500/10 border-2 border-[#003087]/30">
-                  <img src="/paypal.png" alt="PayPal" className="w-10 h-10 object-contain" />
+                  <img src={`${import.meta.env.BASE_URL}paypal.png`} alt="PayPal" className="w-10 h-10 object-contain" />
                 </div>
                 <h3 className="font-heading font-bold text-xl text-dark mb-2">PayPal</h3>
                 <p className="text-dark/60 text-sm leading-relaxed mb-6 flex-1">

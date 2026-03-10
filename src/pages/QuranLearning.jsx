@@ -196,11 +196,11 @@ export default function QuranLearning() {
               <div className="grid grid-cols-2 gap-3 md:gap-4">
                 {/* Large image spanning full width */}
                 <button
-                  onClick={() => setLightbox('/images/quran-class-2.jpg')}
+                  onClick={() => setLightbox(`${import.meta.env.BASE_URL}images/quran-class-2.jpg`)}
                   className="col-span-2 group relative rounded-2xl overflow-hidden shadow-lg ring-1 ring-dark/10 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-500"
                 >
                   <img
-                    src="/images/quran-class-2.jpg"
+                    src={`${import.meta.env.BASE_URL}images/quran-class-2.jpg`}
                     alt="Cours de Coran — salle de classe"
                     className="w-full h-56 md:h-64 object-cover transition-transform duration-500 group-hover:scale-105"
                   />
@@ -212,8 +212,8 @@ export default function QuranLearning() {
                 </button>
                 {/* Bottom two images side by side */}
                 {[
-                  { src: '/images/quran-class-3.jpg', alt: 'Élèves en cours d\'arabe' },
-                  { src: '/images/quran-class-1.jpg', alt: 'Apprentissage du Coran' },
+                  { src: `${import.meta.env.BASE_URL}images/quran-class-3.jpg`, alt: 'Élèves en cours d\'arabe' },
+                  { src: `${import.meta.env.BASE_URL}images/quran-class-1.jpg`, alt: 'Apprentissage du Coran' },
                 ].map((img) => (
                   <button
                     key={img.src}

@@ -16,7 +16,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center space-x-3 mb-6">
-              <img src="/logo.png" alt="AMC Logo" className="w-14 h-14 rounded-full object-cover" />
+              <img src={`${import.meta.env.BASE_URL}logo.png`} alt="AMC Logo" className="w-14 h-14 rounded-full object-cover" />
               <div>
                 <span className="font-heading font-bold text-lg block leading-tight">AMC</span>
                 <span className="text-gold-400 text-xs tracking-widest uppercase">Thonon-les-Bains</span>
