@@ -259,28 +259,29 @@ export default function MediaCenter() {
                 </div>
 
                 {/* Channel details */}
-                <div className="flex-1 min-w-0">
-                  <h2 className="font-heading font-bold text-xl md:text-2xl text-dark truncate">
-                    {channelInfo?.name || 'AMC Mosquée Thonon'}
-                  </h2>
-                  <div className="flex flex-wrap items-center gap-3 mt-1 text-dark/50 text-sm">
-                    {channelInfo?.subscribers > 0 && (
-                      <span>{channelInfo.subscribers.toLocaleString('fr-FR')} abonnés</span>
-                    )}
-                    {channelInfo?.viewCount > 0 && (
-                      <>
-                        {channelInfo?.subscribers > 0 && <span>•</span>}
-                        <span>{channelInfo.viewCount.toLocaleString('fr-FR')} vues</span>
-                      </>
-                    )}
-                    {channelInfo?.videoCount > 0 && (
-                      <>
-                        {(channelInfo?.subscribers > 0 || channelInfo?.viewCount > 0) && <span>•</span>}
-                        <span>{channelInfo.videoCount.toLocaleString('fr-FR')} vidéos</span>
-                      </>
-                    )}
-                  </div>
-                </div>
+        <div className="flex-1 min-w-0">
+          <h2 className="font-heading font-bold text-xl md:text-2xl text-dark truncate">
+          {channelInfo?.name || 'AMC Mosquée Thonon'}
+          </h2>
+          {/* Stats row under channel name */}
+          <div className="flex flex-wrap items-center gap-4 mt-2 text-dark/60 text-base font-medium">
+          {channelInfo?.subscribers > 0 && (
+            <span>
+            {channelInfo.subscribers.toLocaleString('fr-FR')} <span className="text-xs font-normal text-dark/40">abonnés</span>
+            </span>
+          )}
+          {channelInfo?.viewCount > 0 && (
+            <span>
+            {channelInfo.viewCount.toLocaleString('fr-FR')} <span className="text-xs font-normal text-dark/40">vues</span>
+            </span>
+          )}
+          {channelInfo?.videoCount > 0 && (
+            <span>
+            {channelInfo.videoCount.toLocaleString('fr-FR')} <span className="text-xs font-normal text-dark/40">vidéos</span>
+            </span>
+          )}
+          </div>
+        </div>
 
                 {/* Subscribe + Visit */}
                 <div className="flex items-center gap-3 flex-shrink-0">
