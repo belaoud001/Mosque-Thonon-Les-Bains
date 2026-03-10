@@ -116,7 +116,7 @@ export default function PrayerTimesWidget({ compact = false }) {
             className={`relative rounded-2xl p-6 text-center transition-all duration-500 card-hover ${
               isNext
                 ? 'bg-gradient-to-br from-primary-500 to-primary-700 text-white shadow-xl shadow-primary-500/20'
-                : 'bg-white border border-gold-100 hover:border-gold-300'
+                : 'bg-white border border-gold-100 hover:border-primary-500'
             }`}
           >
             {isNext && (

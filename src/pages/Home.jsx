@@ -373,7 +373,7 @@ export default function Home() {
                 <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-400/20 to-transparent" />
                 <div className="relative z-10">
                   {/* Avatar */}
-                  <div className="w-28 h-28 mx-auto rounded-full overflow-hidden ring-4 ring-white/20 shadow-xl mb-6">
+                  <div className="w-28 h-28 mx-auto rounded-full overflow-hidden ring-4 ring-gold-400 shadow-xl mb-6">
                     <img
                       src={CHANNEL_AVATAR}
                       alt={channelInfo?.name || 'AMC Mosquée THONON'}

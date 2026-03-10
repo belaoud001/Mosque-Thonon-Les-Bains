@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Phone, Mail, MapPin, Clock, Heart, Facebook, Youtube, Instagram } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock, Heart, Facebook, Youtube, Instagram, ArrowUpRight } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -90,7 +90,10 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-heading font-semibold text-gold-400 mb-6 text-lg">Contact</h3>
+            <Link to="/contact" className="inline-flex items-center group mb-6">
+              <h3 className="font-heading font-semibold text-gold-400 text-lg group-hover:underline">Contact</h3>
+              <ArrowUpRight className="w-5 h-5 ml-2 text-gold-400 group-hover:translate-x-1 transition-transform" />
+            </Link>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-primary-400 flex-shrink-0 mt-0.5" />
