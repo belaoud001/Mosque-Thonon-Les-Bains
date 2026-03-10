@@ -1,0 +1,271 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========== BASE STYLES ========== */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ivory text-dark antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: rgba(212, 168, 75, 0.3);
+    color: #1A1A2E;
+  }
+}
+
+/* ========== ISLAMIC GEOMETRIC PATTERNS ========== */
+
+/* 8-pointed star pattern overlay */
+.islamic-pattern-bg {
+  position: relative;
+}
+
+.islamic-pattern-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23D4A84B' fill-opacity='0.07'%3E%3Cpath d='M50 15L57.07 42.93L85 50L57.07 57.07L50 85L42.93 57.07L15 50L42.93 42.93Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Zellige-inspired tessellation */
+.zellige-pattern {
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23D4A84B' stroke-opacity='0.12' stroke-width='0.5'%3E%3Cpolygon points='60,0 120,30 120,90 60,120 0,90 0,30'/%3E%3Cpolygon points='60,20 100,40 100,80 60,100 20,80 20,40'/%3E%3Cline x1='60' y1='0' x2='60' y2='20'/%3E%3Cline x1='120' y1='30' x2='100' y2='40'/%3E%3Cline x1='120' y1='90' x2='100' y2='80'/%3E%3Cline x1='60' y1='120' x2='60' y2='100'/%3E%3Cline x1='0' y1='90' x2='20' y2='80'/%3E%3Cline x1='0' y1='30' x2='20' y2='40'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Interlocking diamond pattern */
+.diamond-pattern {
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill='none' stroke='%23D4A84B' stroke-opacity='0.1'%3E%3Cpath d='M20 0L40 20L20 40L0 20Z'/%3E%3Cpath d='M20 10L30 20L20 30L10 20Z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ========== DECORATIVE ELEMENTS ========== */
+
+/* Islamic arch shape */
+.arch-frame {
+  clip-path: polygon(
+    0% 100%,
+    0% 35%,
+    2% 25%,
+    6% 18%,
+    12% 12%,
+    20% 7%,
+    30% 3%,
+    40% 1%,
+    50% 0%,
+    60% 1%,
+    70% 3%,
+    80% 7%,
+    88% 12%,
+    94% 18%,
+    98% 25%,
+    100% 35%,
+    100% 100%
+  );
+}
+
+/* Horseshoe arch */
+.horseshoe-arch {
+  border-radius: 50% 50% 5% 5% / 60% 60% 5% 5%;
+}
+
+/* ========== CUSTOM SCROLLBAR ========== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FDF6E9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #0A6B6B, #D4A84B);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #085858, #B8922E);
+}
+
+/* ========== COMPONENT STYLES ========== */
+
+/* Gold gradient text */
+.gold-text {
+  background: linear-gradient(135deg, #D4A84B, #E8C45E, #D4A84B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Shimmer button effect */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: rotate(45deg);
+  transition: 0.6s;
+  opacity: 0;
+}
+
+.btn-shimmer:hover::after {
+  opacity: 1;
+  animation: shimmerBtn 1.5s;
+}
+
+@keyframes shimmerBtn {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) rotate(45deg); }
+}
+
+/* Decorative border */
+.islamic-border {
+  border-image: repeating-linear-gradient(
+    90deg,
+    #D4A84B 0px,
+    #D4A84B 8px,
+    transparent 8px,
+    transparent 12px,
+    #0A6B6B 12px,
+    #0A6B6B 20px,
+    transparent 20px,
+    transparent 24px
+  ) 4;
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 20px 60px rgba(10, 107, 107, 0.15),
+    0 0 0 1px rgba(212, 168, 75, 0.2);
+}
+
+/* Section divider */
+.section-divider {
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #D4A84B 20%,
+    #0A6B6B 50%,
+    #D4A84B 80%,
+    transparent
+  );
+}
+
+/* ========== HERO STYLES ========== */
+.hero-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(26, 26, 46, 0.92) 0%,
+    rgba(10, 107, 107, 0.88) 50%,
+    rgba(26, 26, 46, 0.92) 100%
+  );
+}
+
+/* ========== ANIMATIONS ========== */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+.stagger-6 { transition-delay: 0.6s; }
+
+/* ========== PRAYER TIMES TABLE ========== */
+.prayer-active {
+  @apply bg-primary-500 text-white;
+  box-shadow: 0 0 20px rgba(10, 107, 107, 0.3);
+}
+
+/* ========== RESPONSIVE HELPERS ========== */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Hide scrollbar for horizontal scroll containers */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* ========== DECORATIVE STAR ========== */
+.islamic-star {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background: currentColor;
+  clip-path: polygon(
+    50% 0%, 61% 35%, 98% 35%, 68% 57%,
+    79% 91%, 50% 70%, 21% 91%, 32% 57%,
+    2% 35%, 39% 35%
+  );
+}
+
+/* Ornate frame for images */
+.ornate-frame {
+  position: relative;
+  padding: 4px;
+  background: linear-gradient(135deg, #D4A84B 0%, #0A6B6B 50%, #D4A84B 100%);
+  border-radius: 12px;
+}
+
+.ornate-frame > * {
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ========== PAGE HEADER ========== */
+.page-header {
+  @apply relative py-24 md:py-32 overflow-hidden;
+  background: linear-gradient(135deg, #1A1A2E 0%, #0A6B6B 50%, #1A1A2E 100%);
+}
+
+.page-header::before {
+  content: '';
+  @apply absolute inset-0;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23D4A84B' fill-opacity='0.08'%3E%3Cpath d='M50 15L57.07 42.93L85 50L57.07 57.07L50 85L42.93 57.07L15 50L42.93 42.93Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
