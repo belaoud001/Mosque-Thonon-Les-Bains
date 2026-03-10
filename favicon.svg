@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A6B6B"/>
+      <stop offset="100%" style="stop-color:#D4A84B"/>
+    </linearGradient>
+  </defs>
+  <!-- Mosque dome -->
+  <path d="M50 10 C30 10 20 30 20 40 L20 45 L35 45 L35 35 C35 28 42 20 50 20 C58 20 65 28 65 35 L65 45 L80 45 L80 40 C80 30 70 10 50 10Z" fill="url(#g)"/>
+  <!-- Minaret left -->
+  <rect x="15" y="45" width="10" height="40" fill="#0A6B6B"/>
+  <path d="M15 45 L20 35 L25 45Z" fill="#0A6B6B"/>
+  <!-- Minaret right -->
+  <rect x="75" y="45" width="10" height="40" fill="#0A6B6B"/>
+  <path d="M75 45 L80 35 L85 45Z" fill="#0A6B6B"/>
+  <!-- Main body -->
+  <rect x="25" y="45" width="50" height="40" fill="#0A6B6B"/>
+  <!-- Door arch -->
+  <path d="M42 85 L42 65 C42 58 45 55 50 55 C55 55 58 58 58 65 L58 85Z" fill="#D4A84B"/>
+  <!-- Crescent -->
+  <circle cx="50" cy="12" r="4" fill="#D4A84B"/>
+  <circle cx="51.5" cy="11" r="3" fill="#0A6B6B"/>
+  <!-- Star -->
+  <polygon points="50,6 51,9 54,9 51.5,11 52.5,14 50,12 47.5,14 48.5,11 46,9 49,9" fill="#D4A84B" transform="scale(0.5) translate(50, -2)"/>
+</svg>
