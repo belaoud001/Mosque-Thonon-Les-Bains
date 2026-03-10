@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/',
+  base: '/Mosque-Thonon-Les-Bains/',
   plugins: [react()],
   server: {
     allowedHosts: [
